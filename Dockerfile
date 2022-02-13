@@ -6,5 +6,5 @@ RUN ./gradlew uild
 
 FROM tomcat:9
 WORKDIR webapp
-COPY --from=base /app/build/lib/sampleweb-0.0.1-SNAPSHOT.war
+COPY --from=base /app/build/lib/sampleweb-0.0.1-SNAPSHOT.war .
 RUN rm -rf ROOT && mv sampleweb-0.0.1-SNAPSHOT.WAR ROOT.war
